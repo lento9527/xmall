@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yzsunlei.xmall.admin.dao.OmsOrderDao">
-    <resultMap id="orderDetailResultMap" type="com.yzsunlei.xmall.admin.dto.OmsOrderDetail" extends="com.yzsunlei.xmall.db.mapper.OmsOrderMapper.BaseResultMap">
-        <collection property="orderItemList" resultMap="com.yzsunlei.xmall.db.mapper.OmsOrderItemMapper.BaseResultMap" columnPrefix="item_"/>
-        <collection property="historyList" resultMap="com.yzsunlei.xmall.db.mapper.OmsOrderOperateHistoryMapper.BaseResultMap" columnPrefix="history_"/>
+<mapper namespace="com.none.xmall.admin.dao.OmsOrderDao">
+    <resultMap id="orderDetailResultMap" type="com.none.xmall.admin.dto.OmsOrderDetail" extends="com.none.xmall.db.mapper.OmsOrderMapper.BaseResultMap">
+        <collection property="orderItemList" resultMap="com.none.xmall.db.mapper.OmsOrderItemMapper.BaseResultMap" columnPrefix="item_"/>
+        <collection property="historyList" resultMap="com.none.xmall.db.mapper.OmsOrderOperateHistoryMapper.BaseResultMap" columnPrefix="history_"/>
     </resultMap>
-    <select id="getList" resultMap="com.yzsunlei.xmall.db.mapper.OmsOrderMapper.BaseResultMap">
+    <select id="getList" resultMap="com.none.xmall.db.mapper.OmsOrderMapper.BaseResultMap">
         SELECT *
         FROM
         oms_order

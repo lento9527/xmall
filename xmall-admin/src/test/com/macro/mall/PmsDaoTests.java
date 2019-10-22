@@ -1,11 +1,11 @@
-package com.yzsunlei.xmall;
+package com.none.xmall;
 
 
-import com.yzsunlei.xmall.dao.PmsMemberPriceDao;
-import com.yzsunlei.xmall.dao.PmsProductDao;
-import com.yzsunlei.xmall.admin.dto.PmsProductResult;
-import com.yzsunlei.xmall.db.model.PmsMemberPrice;
-import com.yzsunlei.xmall.util.JsonUtil;
+import com.none.xmall.dao.PmsMemberPriceDao;
+import com.none.xmall.dao.PmsProductDao;
+import com.none.xmall.admin.dto.PmsProductResult;
+import com.none.xmall.db.model.PmsMemberPrice;
+import com.none.xmall.util.JsonUtil;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

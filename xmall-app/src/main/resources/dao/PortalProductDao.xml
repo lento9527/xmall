@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yzsunlei.xmall.app.dao.PortalProductDao">
-    <resultMap id="cartProductMap" type="com.yzsunlei.xmall.app.domain.CartProduct" autoMapping="true">
+<mapper namespace="com.none.xmall.app.dao.PortalProductDao">
+    <resultMap id="cartProductMap" type="com.none.xmall.app.domain.CartProduct" autoMapping="true">
         <id column="id" jdbcType="BIGINT" property="id" />
-        <collection property="productAttributeList" columnPrefix="attr_" resultMap="com.yzsunlei.xmall.db.mapper.PmsProductAttributeMapper.BaseResultMap">
+        <collection property="productAttributeList" columnPrefix="attr_" resultMap="com.none.xmall.db.mapper.PmsProductAttributeMapper.BaseResultMap">
         </collection>
-        <collection property="skuStockList" columnPrefix="sku_" resultMap="com.yzsunlei.xmall.db.mapper.PmsSkuStockMapper.BaseResultMap">
+        <collection property="skuStockList" columnPrefix="sku_" resultMap="com.none.xmall.db.mapper.PmsSkuStockMapper.BaseResultMap">
         </collection>
     </resultMap>
-    <resultMap id="promotionProductMap" type="com.yzsunlei.xmall.app.domain.PromotionProduct" extends="com.yzsunlei.xmall.db.mapper.PmsProductMapper.BaseResultMap">
+    <resultMap id="promotionProductMap" type="com.none.xmall.app.domain.PromotionProduct" extends="com.none.xmall.db.mapper.PmsProductMapper.BaseResultMap">
         <id column="id" jdbcType="BIGINT" property="id" />
-        <collection property="skuStockList" columnPrefix="sku_" resultMap="com.yzsunlei.xmall.db.mapper.PmsSkuStockMapper.BaseResultMap">
+        <collection property="skuStockList" columnPrefix="sku_" resultMap="com.none.xmall.db.mapper.PmsSkuStockMapper.BaseResultMap">
         </collection>
-        <collection property="productLadderList" columnPrefix="ladder_" resultMap="com.yzsunlei.xmall.db.mapper.PmsProductLadderMapper.BaseResultMap">
+        <collection property="productLadderList" columnPrefix="ladder_" resultMap="com.none.xmall.db.mapper.PmsProductLadderMapper.BaseResultMap">
         </collection>
-        <collection property="productFullReductionList" columnPrefix="full_" resultMap="com.yzsunlei.xmall.db.mapper.PmsProductFullReductionMapper.BaseResultMap">
+        <collection property="productFullReductionList" columnPrefix="full_" resultMap="com.none.xmall.db.mapper.PmsProductFullReductionMapper.BaseResultMap">
         </collection>
     </resultMap>
     <select id="getCartProduct" resultMap="cartProductMap">
